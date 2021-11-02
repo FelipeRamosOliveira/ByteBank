@@ -1,5 +1,5 @@
 // Classe que representa a conta corrente
-import { Cliente } from "./ByteBank/Cliente.js";
+import { Cliente } from "./Cliente.js";
 
 export class Conta{
 
