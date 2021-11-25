@@ -1,8 +1,8 @@
 // Importar modulos (npm) init)
-import {Cliente} from "./Cliente.js"
-import {Conta} from "./Conta.js"
-import {ContaCorrente} from "./ContaCorrente.js"
-import {ContaPoupanca} from "./ContaPoupanca.js"
+import { Cliente } from "./Cliente.js";
+import { Conta } from "./Conta.js";
+import { ContaCorrente } from "./ContaCorrente.js";
+import { ContaPoupanca } from "./ContaPoupanca.js";
 
 // Exemplo de uso de classes
 // Criar clientes
@@ -22,11 +22,10 @@ conta1.tranferir(valor, conta2);
 // Verificar
 console.log(conta1);
 
-
 // Criar contas poupanças
-const poupanca = new ContaPoupanca(cliente1,1001,1000);
+const poupanca = new ContaPoupanca(cliente1, 1001, 1000);
 console.log(poupanca);
 
 // Criar conta generica
-const generica = new Conta(cliente1,1001,1000);
+const generica = new Conta(cliente1, 1001, 1000);
 console.log(generica);
