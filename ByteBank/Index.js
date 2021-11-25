@@ -3,6 +3,7 @@ import { Cliente } from "./Cliente.js";
 import { Conta } from "./Conta.js";
 import { ContaCorrente } from "./ContaCorrente.js";
 import { ContaPoupanca } from "./ContaPoupanca.js";
+import { ContaSalario } from "./ContaSalario.js";
 
 // Exemplo de uso de classes
 // Criar clientes
@@ -26,6 +27,6 @@ console.log(conta1);
 const poupanca = new ContaPoupanca(cliente1, 1001, 1000);
 console.log(poupanca);
 
-// Criar conta generica
+// Criar conta generica (abstrata)
 const generica = new Conta(cliente1, 1001, 1000);
 console.log(generica);

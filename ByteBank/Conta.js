@@ -1,15 +1,17 @@
-// Classe que representa a conta corrente
+// Classe que representa a conta corrente - Abstrata
+// * Classe abstrata  = não pode ser instanciada diretamente
 import { Cliente } from "./Cliente.js";
 
 export class Conta {
   // Construtor
   constructor(cliente, agencia, saldiInicial) {
-    this._saldo = saldiInicial;
-    this._agencia = agencia;
-    this._cliente = cliente;
+    //Evitar que o usuario crie uma conta sem um cliente
     if (this.constructor === Conta) {
       throw new Error("Não é possível instanciar Conta diretamente");
     }
+    this._saldo = saldiInicial;
+    this._agencia = agencia;
+    this._cliente = cliente;
   }
 
   // Acessores
@@ -27,10 +29,9 @@ export class Conta {
     return this._saldo;
   }
 
-  // Metodo para sacar (Publico)
+  // Metodo para sacar (Abstrato)
   sacar(valor) {
-    let taxa = 1;
-    return this._sacar(valor, taxa);
+    throw new Error("O metodo sacar não deve ser chamado diretamente");
   }
   // Metodo para sacar (Privado)
   _sacar(valor, taxa) {

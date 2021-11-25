@@ -11,4 +11,9 @@ export class ContaPoupanca extends Conta {
     super(cliente, agencia, saldoInicial);
     ContaPoupanca.numeroDeContas += 1; // Incrementa o numero de contas
   }
+  // Metodo sacar especifico para conta poupanca
+  sacar(valor) {
+    let taxa = 1.05;
+    return this._sacar(valor, taxa);
+  }
 }
