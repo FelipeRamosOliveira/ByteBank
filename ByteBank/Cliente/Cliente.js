@@ -5,8 +5,13 @@ export class Cliente {
     return this._cpf;
   }
   // Construtor
-  constructor(nome, cpf) {
+  constructor(nome, cpf, senha) {
     this.nome = nome;
     this._cpf = cpf;
+    this._senha = senha;
+  }
+
+  autenticar(senha) {
+    return senha === this._senha;
   }
 }

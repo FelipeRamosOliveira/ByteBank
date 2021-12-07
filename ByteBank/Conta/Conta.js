@@ -1,6 +1,6 @@
 // Classe que representa a conta corrente - Abstrata
 // * Classe abstrata  = não pode ser instanciada diretamente
-import { Cliente } from "./Cliente.js";
+import { Cliente } from "../Cliente/Cliente.js";
 
 export class Conta {
   // Construtor
